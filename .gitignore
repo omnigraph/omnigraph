@@ -1,0 +1,9 @@
+# node package dir
+/node_modules
+
+# composer package dir
+/vendor
+
+# lock files
+*.lock
+
