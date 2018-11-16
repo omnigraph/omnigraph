@@ -1,5 +1,5 @@
 <?php
-require_once '../../../vendor/autoload.php';
+require_once '../../../../vendor/autoload.php';
 
 use Lcobucci\JWT\Parser;
 use Lcobucci\JWT\Builder;
@@ -7,11 +7,11 @@ use Lcobucci\JWT\Builder;
 use Lcobucci\JWT\Signer\Keychain;
 use Lcobucci\JWT\Signer\Rsa\Sha256;
 
-$signer = new Sha256();
-$keychain = new Keychain();
-
 class Jwt {
-    public function create() {
+    static function create() {
+        $keychain = new Keychain();
+        $signer = new Sha256();
+
         $contents = file_get_contents('jwt.pem');
         $key = $keychain->getPrivateKey($contents);
         return (new Builder())->setIssuer('omnigraph')
@@ -21,14 +21,15 @@ class Jwt {
                               ->sign($signer, $key)
                               ->getToken();
     }
-    public function validate(string $jwtString) {
+    static function validate(string $jwtString) {
         $token = (new Parser())->parse($jwtString);
+        $keychain = new Keychain();
+        $signer = new Sha256();
+
         $contents = file_get_contents('jwt.pub');
-        return $token->verify($this->signer, $keychain->getPublicKey($contents));
-        return $token->validate($data);
+        return $token->verify($signer, $keychain->getPublicKey($contents));
     }
 }
-$j = new Jwt();
-$t = $j->create();
-var_dump($j->validate($t));
+$t = Jwt::create();
+var_dump(Jwt::validate($t));
 ?>
