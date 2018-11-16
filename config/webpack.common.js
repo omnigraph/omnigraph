@@ -10,8 +10,7 @@ const extractCss = new CssExtractPlugin({
 
 module.exports = {
     entry: {
-        'main': './src/index.tsx',
-        'other': './src/other.tsx'
+        'main': path.resolve(__dirname, '../src/index.tsx'),
     },
     module: {
         rules: [
@@ -27,18 +26,37 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss$/,
-                include: /src/,
+                test: /\.s?css$/,
+                exclude: /node_modules/,
                 use: [
+                    'css-hot-loader',
                     CssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
+                ]
+            },
+            {
+                test: /\.(gif|svg|jpe?g|png)$/,
+                use: 'file-loader'
+            },
+            {
+                test: /\.(eot|woff2?|ttf|otf)/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'assets/fonts/'
+                        }
+                    }
                 ]
             }
         ]
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js']
+        extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+        }
     },
     optimization: {
         splitChunks: {
@@ -58,42 +76,24 @@ module.exports = {
         }
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(
+            [path.resolve(__dirname, '../dist')],
+            {
+                root: path.resolve(__dirname, '../'),
+            }
+        ),
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: path.resolve(__dirname, '../src/index.html'),
         }),
         new CssExtractPlugin({
-            filename: '[name].[chunkHash].css',
+            filename: '[name].css',
             chunkFilename: '[name].[id].css'
         }),
-        new UglifyPlugin({
-            include: /\.tsx?$/,
-            uglifyOptions: {
-                ecma: 8,
-                warnings: true,
-                mangle: false,
-                compress: {
-                    dropDebugger: false,
-                    deadCode: false,
-                },
-                output: {
-                    beautify: true,
-                    width: 140,
-                }
-            },
-        })
     ],
-    devServer: {
-        stats: "normal",
-        open: true,
-        port: 3000,
-        compress: true,
-        contentBase: path.join(__dirname, "dist"),
-        overlay: true
-    },
     devtool: 'eval-source-map',
     output: {
-        filename: 'bundle.[chunkHash].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: '[name].[hash].js',
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '/',
     }
 }

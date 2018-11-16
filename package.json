@@ -4,42 +4,65 @@
   "description": "Testing build tools with React and component structures",
   "main": "index.js",
   "dependencies": {
+    "@types/react-router": "^4.4.1",
+    "@types/react-router-dom": "^4.3.1",
     "emotion": "^9.2.12",
-    "npm": "^5.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-emotion": "^9.2.12",
     "react-redux": "^5.1.1",
-    "redux": "^3.7.2",
-    "rxjs": "^5.5.12"
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "rxjs": "^6.3.3",
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
     "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.9",
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^0.28.11",
+    "clean-webpack-plugin": "^1.0.0",
+    "css-loader": "^1.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.4",
+    "lint-staged": "^8.0.4",
     "mini-css-extract-plugin": "^0.2.0",
     "node-sass": "^4.10.0",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "ts-loader": "^4.5.0",
-    "uglifyjs-webpack-plugin": "^1.3.0",
+    "prettier": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.25.1",
-    "webpack-cli": "^2.1.5",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "NODE_ENV=dev webpack --mode development --config=webpack.config.js",
-    "buid:prod": "NODE_ENV=prod webpack --mode production",
+    "build:dev": "NODE_ENV=dev webpack --mode development --config=config/webpack.config.js",
+    "buid:prod": "NODE_ENV=prod webpack --mode production --config=config/webpack.prod.js",
     "dev": "webpack-dev-server --color --progress",
     "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/muradkhan101/react-playground.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build:prod"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --config ./config/prettier.typescript.js --write",
+      "git add -A"
+    ],
+    "*.scss": [
+      "prettier --config ./config/prettier.scss.js --write",
+      "git add -A"
+    ]
   },
   "author": "",
   "license": "ISC",
