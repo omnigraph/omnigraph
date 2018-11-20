@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import styled from 'react-emotion';
-import { env } from './environments/environment';
+// import { env } from './environments/environment';
 
 import './index.scss';
 

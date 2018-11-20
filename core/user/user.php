@@ -6,9 +6,6 @@ require_once('../services/authentication.php');
 
 namespace Omnigraph\User;
 
-use GraphQL\Type\Definition\ObjectType;
-use GraphQL\Type\Definition\Type;
-
 class User extends ObjectType
 {
 	private $id;
@@ -19,15 +16,7 @@ class User extends ObjectType
     
     function __construct($name,$email,$role,$token)
     {
-	    $config = [
-            // Note: 'name' is not needed in this form:
-            // it will be inferred from class name by omitting namespace and dropping "Type" suffix
-            'fields' => [
-                'id' => Type::id()
-            ]
-        ];
-
-        parent::__construct($config);
+	    
     }
     private function getInfo()
     {

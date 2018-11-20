@@ -2,21 +2,24 @@
 
 class Database
 {
-    function __construct()
-    {
-        
-    }
-    // create a new connection to database
+	private $user = 'root';
+    private $pass = 'system';
+
+    // create a new database connection and return it
     public static connect() 
     {
-		//return db connection
+	    $conn = new PDO('mysql:host=localhost; dbname=system', $user, $pass);
+		return $conn;
     }
     
     // destroy database connection
     public static disconnect($conn) 
     {
-	
+	    $conn->destroy();
+	    return true;
     }
 
 }
+?>
+
 ?>

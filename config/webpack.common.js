@@ -2,11 +2,6 @@ const path = require("path");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyPlugin = require('uglifyjs-webpack-plugin');
-
-const extractCss = new CssExtractPlugin({
-    filename: './dist/assets/app.css'
-});
 
 module.exports = {
     entry: {
