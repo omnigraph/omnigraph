@@ -16,7 +16,7 @@ Social Media Management & Marketing Platform
   - [NPM](https://github.com/npm/cli) - a package manager for JavaScript
   - [WebPack](https://github.com/webpack) - A bundler for javascript
   - [Sass](https://github.com/sass/sass) - CSS Preprocessor
-  - [TypeScript](https://github.com/Microsoft/TypeScript) - is a superset of JavaScript, that adds optional types to JavaScript that support tools for large-scale JavaScript applications
+  - [TypeScript](https://github.com/Microsoft/TypeScript) - adds optional types to JavaScript that support tools for large-scale JavaScript applications
 - Backend
   - [PHP](https://github.com/php)
   - [Composer](https://github.com/composer/composer)
