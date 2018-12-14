@@ -24,24 +24,36 @@ Social Media Management & Marketing Platform
 
 ### Directory Structure
 understanding how to navigation the directory structure.
+```
+├── dir1
+│   ├── file11.ext
+│   └── file12.ext
+├── dir2
+│   ├── file21.ext
+│   ├── file22.ext
+│   └── file23.ext
+├── dir3
+├── file_in_root.ext
+└── README.md
 
-|-- omnigraph
-    |-- package.json (webpack configuration)
-    |-- tsconfig.json (typescript configuration)
-    |-- tslint.json (lint configuration)
-    |-- composer.json (composer package manager configuration)
-    |--  .git (source code version control)
-    |   |-- config (contains git configuration)
-    |-- backend (backend directory)
-    |   |-- api (contains api)
-    |   |-- core (contains reusable code used
-    |   |-- config (contains system constructs)
-    |-- frontend (frontend directory)
-        |-- app
-        |   |-- index.html (bootloader target)
-        |   |-- index.scss (global stylesheet)
-        |-- core (reusable code directory)
-        |-- environments (contains build changes, related to the environment)
-             |-- environment.dev.ts (development enviroment)
-             |-- environment.prod.ts (production enviroment)
+└── /omnigraph
+    ├── package.json (webpack configuration)
+    ├── tsconfig.json (typescript configuration)
+    ├── tslint.json (lint configuration)
+    ├── composer.json (composer package manager configuration)
+    └──  /.git (source code version control)
+    │   └── config (contains git configuration)
+    └── /backend (backend directory)
+    │    ├── api (contains api)
+    │    ├── core (contains reusable code used
+    │    └──config (contains system constructs)
+    └── frontend (frontend directory)
+    │    ├── app
+    │    ├── index.html (bootloader target)
+    │    ├── index.scss (global stylesheet)
+    │    └── core (reusable code directory)
+    ├── environments (contains build changes, related to the environment)
+         ├── environment.dev.ts (development enviroment)
+         └── environment.prod.ts (production enviroment)
+ ```
 
