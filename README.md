@@ -1,5 +1,6 @@
 # Omnigraph
-Social Media Management & Marketing Platform
+### Social Media Management & Marketing Platform
+##### The goal of the platform is to allow businesses to manage and distribute their content from a single place.
 
 ## Quick Overview
 - Installation
