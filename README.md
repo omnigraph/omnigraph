@@ -52,7 +52,7 @@ Understanding how to navigation the directory structure.
 
 ### Installation
 1. Install the OSX Package Manager **HomeBrew** 
-`$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`
+```$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install"```
 2. Install **Apache** using **HomeBrew**
 `$ brew install httpd`
 3. Install **PHP**
