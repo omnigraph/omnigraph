@@ -11,6 +11,7 @@ Social Media Management & Marketing Platform
 
 
 ### Packages
+The main packages used in this project.
 - Frontend
   - [React](https://github.com/facebook/react) - A declarative, efficient, and flexible JavaScript library for building user interfaces
   - [NPM](https://github.com/npm/cli) - a package manager for JavaScript
