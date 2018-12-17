@@ -19,12 +19,12 @@ Social Media Management & Marketing Platform
   - [TypeScript](https://github.com/Microsoft/TypeScript) - adds optional types to JavaScript that support tools for large-scale JavaScript applications
 - Backend
   - [PHP](https://github.com/php)
-  - [Composer](https://github.com/composer/composer)
+  - [Composer](https://github.com/composer/composer) - Dependency Manager for PHP
   - [Facebook](https://github.com/facebook?utf8=%E2%9C%93&q=&type=&language=php)
-    - [Graph API](https://github.com/facebook/php-graph-sdk)
-    - [Business API](https://github.com/facebook/facebook-php-business-sdk)
-   - [Icobucci](https://github.com/lcobucci/jwt)
-  - [Apache](https://github.com/apache/httpd)
+    - [Graph API](https://github.com/facebook/php-graph-sdk) - The Facebook SDK for PHP provides a native interface to the Graph API and Facebook Login.
+    - [Business API](https://github.com/facebook/facebook-php-business-sdk) - An SDK built to facilitate application development for Facebook Ads API.
+  - [Icobucci](https://github.com/lcobucci/jwt) - A simple library to work with JSON Web Token and JSON Web Signature
+  - [Apache](https://github.com/apache/httpd) - Apache HTTP Server
 
 
 ### Directory Structure
