@@ -20,9 +20,9 @@ Social Media Management & Marketing Platform
 - Backend
   - [PHP](https://github.com/php)
   - [Composer](https://github.com/composer/composer) - Dependency Manager for PHP
-  - [Facebook](https://github.com/facebook?utf8=%E2%9C%93&q=&type=&language=php)
-    - [Graph API](https://github.com/facebook/php-graph-sdk) - The Facebook SDK for PHP provides a native interface to the Graph API and Facebook Login.
-    - [Business API](https://github.com/facebook/facebook-php-business-sdk) - An SDK built to facilitate application development for Facebook Ads API.
+  - [Facebook](https://github.com/facebook?utf8=%E2%9C%93&q=&type=&language=php) - The Facebook SDK for PHP
+    - [Graph API](https://github.com/facebook/php-graph-sdk) - provides a native interface to the Graph API and Facebook Login.
+    - [Business API](https://github.com/facebook/facebook-php-business-sdk) - built to facilitate application development for Facebook Ads API.
   - [Icobucci](https://github.com/lcobucci/jwt) - A simple library to work with JSON Web Token and JSON Web Signature
   - [Apache](https://github.com/apache/httpd) - Apache HTTP Server
 
