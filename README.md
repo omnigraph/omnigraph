@@ -1,6 +1,6 @@
 # Omnigraph - Social Media Management & Marketing Platform
 ## Description
-The goal of the platform is to provide consolidation for businesses, allowing them create and manage their content in a single place and thus distributing their content across other social media platforms such as: FaceBook, Instagram, Twitter and LinkedIN.
+*The goal of the platform is to provide consolidation for businesses, allowing them create and manage their content in a single place and thus distributing their content across other social media platforms such as: FaceBook, Instagram, Twitter and LinkedIN.*
 
 ## Quick Overview
 - Installation
@@ -9,7 +9,7 @@ The goal of the platform is to provide consolidation for businesses, allowing th
 - [Directory Structure](#directory-structure)
 
 ### Packages
-The main packages used in this project.
+*The main packages used in this project.*
 - Frontend
   - [React](https://github.com/facebook/react) - A declarative, efficient, and flexible JavaScript library for building user interfaces
   - [NPM](https://github.com/npm/cli) - a package manager for JavaScript
@@ -26,7 +26,7 @@ The main packages used in this project.
   - [Apache](https://github.com/apache/httpd) - Apache HTTP Server
 
 ### Directory Structure
-Understanding how to navigation the directory structure.
+*Understanding how to navigation the directory structure.*
 
 ```
 └── /omnigraph
