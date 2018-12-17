@@ -7,9 +7,6 @@ Social Media Management & Marketing Platform
 - [Packages](#packages)
 - [Directory Structure](#directory-structure)
 
-### Installation
-
-
 ### Packages
 The main packages used in this project.
 - Frontend
@@ -26,7 +23,6 @@ The main packages used in this project.
     - [Business API](https://github.com/facebook/facebook-php-business-sdk) - built to facilitate application development for Facebook Ads API.
   - [Icobucci](https://github.com/lcobucci/jwt) - A simple library to work with JSON Web Token and JSON Web Signature
   - [Apache](https://github.com/apache/httpd) - Apache HTTP Server
-
 
 ### Directory Structure
 Understanding how to navigation the directory structure.
@@ -54,3 +50,4 @@ Understanding how to navigation the directory structure.
          └── environment.prod.ts (production enviroment)
  ```
 
+### Installation
