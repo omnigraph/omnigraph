@@ -28,7 +28,7 @@ Social Media Management & Marketing Platform
 
 
 ### Directory Structure
-understanding how to navigation the directory structure.
+Understanding how to navigation the directory structure.
 
 ```
 └── /omnigraph
