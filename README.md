@@ -1,6 +1,6 @@
 # Omnigraph - Social Media Management & Marketing Platform
 ## Description
-*The goal of the platform is to provide consolidation for businesses, allowing them create and manage their content in a single place and thus distributing their content across other social media platforms such as: FaceBook, Instagram, Twitter and LinkedIN.*
+*The goal of the platform is to provide consolidation for businesses, allowing them to create and manage their content in a single place and thus distributing their content across other social media platforms such as: FaceBook, Instagram, Twitter and LinkedIN.*
 
 ## Quick Overview
 - Installation
